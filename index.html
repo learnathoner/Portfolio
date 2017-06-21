@@ -10,68 +10,92 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
+    <!-- Bootstrap Fluid Container -->
+    <div class="container-fluid">
 
-    <header class="page-header">
-      <div class="header-inner">
-        <img class="img-fluid align-self-center" src="http://via.placeholder.com/100x100" alt="placeholder">
-        <div class="header-text-large hidden-xs-down">
-          <h1 class="display-4">Michael Tikh<br>
-          <small class="text-muted">Web Developer</small></h1>
+      <!-- Header (ROW): elements spaced-between -->
+      <header class="header row justify-content-between">
+          <!-- Logo container (COL) : floats vertical center -->
+          <div class="logo-container col- align-self-center">
+            <!-- Logo image -->
+            <img class="logo" src="http://via.placeholder.com/100x100" alt="placeholder">
+          </div>
+          <!-- Name and Caption (COL): right-aligned -->
+          <div class="header-text col- text-right">
+            <!-- Large for < 576px -->
+            <div class="header-text-large hidden-xs-down">
+              <h1 class="display-4">Michael Tikh<br>
+              <small class="text-muted">Web Developer</small></h1>
+            </div>
+            <!-- Small for > 576px -->
+            <div class="header-text-small hidden-sm-up">
+              <h1>Michael Tikh<br>
+              <small class="text-muted">Web Developer</small></h1>
+            </div>
+          </div>
         </div>
-        <div class="header-text-small hidden-sm-up">
-          <h1>Michael Tikh<br>
-          <small class="text-muted">Web Developer</small></h1>
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <main>
-      <section class="content">
+      <!-- Main section -->
+      <main>
+        <!-- Content: max width 850px -->
+        <section class="content">
 
-        <section class="main_image">
-          <article>
-            Description of Main Image
-          </article>
+          <!-- Main Image (ROW)) -->
+          <section class="main-image-container row">
+              <!-- Main Image (COL)-->
+              <div class="col-12">
+                <!-- Main Image: fluid-->
+                <img class="main-image img-fluid" src="http://via.placeholder.com/850x400" alt="">
+              </div>
+          </section>
+
+          <!-- Featured Work Section -->
+          <section class="featured">
+            <!-- Featured Work Header (ROW)-->
+            <section class="featured-header row">
+              <!-- Featured Work Header (COL) -->
+              <div class="col-12 text-center text-sm-left">
+                <h3>
+                  Featured Work
+                </h3>
+              </div>
+            </section>
+
+            <section class="featured_items row">
+
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <figure class="figure featured-item">
+                  <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
+                  <figcap class="figure-caption featured-caption">
+                    <h3 class="text-center">Project Heading</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
+                  </figcap>
+                </figure>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <figure class="figure featured-item">
+                  <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
+                  <figcap class="figure-caption featured-caption">
+                    <h3 class="text-center">Project Heading</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
+                  </figcap>
+                </figure>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4">
+                <figure class="figure featured-item">
+                  <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
+                  <figcap class="figure-caption featured-caption">
+                    <h3 class="text-center">Project Heading</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
+                  </figcap>
+                </figure>
+              </div>
+            </section>
         </section>
 
-        <section class="featured">
-          <section class="featured-header text-center text-sm-left">
-            <h3>
-              Featured Work
-            </h3>
-          </section>
-          <section class="featured_items row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <figure class="figure featured-item">
-                <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
-                <figcap class="figure-caption featured-caption">
-                  <h3 class="text-center">Project Heading</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
-                </figcap>
-              </figure>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <figure class="figure featured-item">
-                <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
-                <figcap class="figure-caption featured-caption">
-                  <h3 class="text-center">Project Heading</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
-                </figcap>
-              </figure>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4">
-              <figure class="figure featured-item">
-                <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
-                <figcap class="figure-caption featured-caption">
-                  <h3 class="text-center">Project Heading</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
-                </figcap>
-              </figure>
-            </div>
-          </section>
-      </section>
-
-    </main>
+      </main>
+    </div>
 
     <script src="http://localhost:35729/livereload.js"></script>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->

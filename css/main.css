@@ -20,14 +20,14 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-header, nav, footer, section, article, div {
-  box-sizing: border-box;
-}
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+p {
+  padding: 10px;
 }
 
 /*
@@ -36,25 +36,13 @@ ul {
 *
 */
 
-.page-header {
-  margin: 0 !important;
-}
-
-.header-inner {
+.header {
   padding: 10px;
-  width: 100%;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: space-between;
 }
 
 .header-text {
-  text-align: right;
-  padding-right: 10px;
+  margin-right: 5px;
 }
-
-
 
 /*
 *
@@ -74,11 +62,8 @@ ul {
 *
 */
 
-.main_image {
-  height: 400px;
-  background-image: url("http://via.placeholder.com/850x400");
-  background-position: center;
-  background-repeat: no-repeat;
+.main-image {
+  max-height: 400px;
 }
 
 /*
@@ -87,26 +72,21 @@ ul {
 *
 */
 
-/*.featured {
-  padding: 10px;
-}*/
 
-.featured-header {
-  padding: 10px;
-}
+/*
+*
+* Bootstrap breakpoints
+*
+*/
 
-.featured-item > img{
-  width: 100%;
-  max-height: 200px;
-}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
 
-.featured-caption {
-  padding: 10px;
-  text-align: center;
-}
-/*.featured_items {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: space-between;
-}*/
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
