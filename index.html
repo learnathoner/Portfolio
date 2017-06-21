@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!-- Installing bootstrap and jquery through npm vs using a cdn link?
-    Using a bundler like webpack to bundle assets const bootstrap = require('bootstrap') -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
 
     <header class="page-header">
       <div class="header-inner">
-        <img src="http://via.placeholder.com/100x100" alt="placeholder">
-        <div class="header-text">
-          <h1>Mike Tikh<br>
-          <small>Front End Developer</small></h1>
+        <img class="img-fluid align-self-center" src="http://via.placeholder.com/100x100" alt="placeholder">
+        <div class="header-text-large hidden-xs-down">
+          <h1 class="display-4">Michael Tikh<br>
+          <small class="text-muted">Web Developer</small></h1>
+        </div>
+        <div class="header-text-small hidden-sm-up">
+          <h1>Michael Tikh<br>
+          <small class="text-muted">Web Developer</small></h1>
         </div>
       </div>
     </header>
@@ -34,35 +35,35 @@
         </section>
 
         <section class="featured">
-          <section class="featured-header">
+          <section class="featured-header text-center text-sm-left">
             <h3>
               Featured Work
             </h3>
           </section>
           <section class="featured_items row">
             <div class="col-xs-12 col-sm-6 col-md-4">
-              <figure class="featured-item">
-                <img src="http://via.placeholder.com/500x500" alt="placeholder">
-                <figcap class="featured-caption">
-                  <h3>Project Heading</h3>
+              <figure class="figure featured-item">
+                <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
+                <figcap class="figure-caption featured-caption">
+                  <h3 class="text-center">Project Heading</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
                 </figcap>
               </figure>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-              <figure class="featured-item">
-                <img src="http://via.placeholder.com/500x500" alt="placeholder">
-                <figcap class="featured-caption">
-                  <h3>Project Heading</h3>
+              <figure class="figure featured-item">
+                <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
+                <figcap class="figure-caption featured-caption">
+                  <h3 class="text-center">Project Heading</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
                 </figcap>
               </figure>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4">
-              <figure class="featured-item">
-                <img src="http://via.placeholder.com/500x500" alt="placeholder">
-                <figcap class="featured-caption">
-                  <h3>Project Heading</h3>
+              <figure class="figure featured-item">
+                <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
+                <figcap class="figure-caption featured-caption">
+                  <h3 class="text-center">Project Heading</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
                 </figcap>
               </figure>
@@ -72,6 +73,10 @@
 
     </main>
 
-  <script src="http://localhost:35729/livereload.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>
 </html>
