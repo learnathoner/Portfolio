@@ -8,95 +8,102 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
-    <!-- Bootstrap Fluid Container -->
+    <!-- Bootstrap4 Container for Body -->
     <div class="container-fluid">
 
-      <!-- Header (ROW): elements spaced-between -->
-      <header class="header row justify-content-between">
-          <!-- Logo container (COL) : floats vertical center -->
-          <div class="logo-container col- align-self-center">
-            <!-- Logo image -->
-            <img class="logo" src="http://via.placeholder.com/100x100" alt="placeholder">
-          </div>
-          <!-- Name and Caption (COL): right-aligned -->
-          <div class="header-text col- text-right">
-            <!-- Large for < 576px -->
-            <div class="header-text-large hidden-xs-down">
-              <h1 class="display-4">Michael Tikh<br>
-              <small class="text-muted">Web Developer</small></h1>
-            </div>
-            <!-- Small for > 576px -->
-            <div class="header-text-small hidden-sm-up">
-              <h1>Michael Tikh<br>
-              <small class="text-muted">Web Developer</small></h1>
-            </div>
-          </div>
+      <!-- Header -->
+      <header class="header">
+        <!-- Logo image -->
+          <img class="logo" src="images/logo.svg" alt="placeholder">
+        <!-- Large Name/Caption for < 576px -->
+        <div class="header-text-large hidden-xs-down header-text">
+          <h1 class="display-4">Michael Tikh<br>
+          <small class="text-muted">Web Developer</small></h1>
+        </div>
+        <!-- Small Name/Caption for > 576px -->
+        <div class="header-text-small hidden-sm-up header-text">
+          <h1>Michael Tikh<br>
+          <small class="text-muted">Web Developer</small></h1>
         </div>
       </header>
 
+      <hr class="line" id="header-divider">
+
+      <!-- TODO: Ask when to use HTML5 tags and comments? -->
+
       <!-- Main section -->
       <main>
-        <!-- Content: max width 850px -->
         <section class="content">
 
-          <!-- Main Image (ROW)) -->
+          <!-- TODO: Ask about imageMagick/grunt for multiple aspect ratios -->
+          <!-- Main Portfolio Image -->
           <section class="main-image-container row">
-              <!-- Main Image (COL)-->
-              <div class="col-12">
-                <!-- Main Image: fluid-->
-                <img class="main-image img-fluid" src="http://via.placeholder.com/850x400" alt="">
-              </div>
+            <picture>
+              <source media="(min-width: 700px)" srcset="images/sql-project.png" />
+              <img class="main-image" src="images/sql-project-sm-med.png" alt="">
+            </picture>
           </section>
 
-          <!-- Featured Work Section -->
+          <!-- Featured Work -->
           <section class="featured">
-            <!-- Featured Work Header (ROW)-->
-            <section class="featured-header row">
-              <!-- Featured Work Header (COL) -->
-              <div class="col-12 text-center text-sm-left">
-                <h3>
+
+            <!-- Featured Work Header -->
+            <section class="featured-header-container row rounded">
+              <div class="col-12 text-center">
+                <h3 class="featured-header">
                   Featured Work
                 </h3>
               </div>
             </section>
 
-            <section class="featured_items row">
-
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <figure class="figure featured-item">
-                  <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
-                  <figcap class="figure-caption featured-caption">
-                    <h3 class="text-center">Project Heading</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
-                  </figcap>
-                </figure>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <figure class="figure featured-item">
-                  <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
-                  <figcap class="figure-caption featured-caption">
-                    <h3 class="text-center">Project Heading</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
-                  </figcap>
-                </figure>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-4">
-                <figure class="figure featured-item">
-                  <img class="figure-img img-fluid" src="http://via.placeholder.com/500x500" alt="placeholder">
-                  <figcap class="figure-caption featured-caption">
-                    <h3 class="text-center">Project Heading</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut saepe dolor, reiciendis quibusdam, dolores, quasi rerum est minus sit nemo, totam veritatis praesentium adipisci fugiat consectetur rem labore similique pariatur explicabo! Eum doloremque facilis quasi sit autem, ad architecto perferendis tenetur. Enim quaerat soluta mollitia nesciunt nihil, quam voluptatibus consequatur!</p>
-                  </figcap>
-                </figure>
-              </div>
+            <!-- Featured Work Items -->
+            <section class="featured-items row">
+              <!-- Item 1 -->
+              <figure class="figure featured-item col-xs-12 col-sm-6 col-md-4">
+                <picture>
+                  <source media="(max-width: 575px)" srcset="images/website-project-sm.png" />
+                  <source media="(min-width: 576px)" srcset="images/website-project-med-lg.png" />
+                  <img class="featured-image img-thumbnail" src="images/website-project.png" alt="placeholder">
+                </picture>
+                <figcaption class="figure-caption featured-caption">
+                  <h3 class="featured-item-heading text-center">Project Portfolio</h3>
+                  <p>That thing you're looking at right now. My Project Portfolio is the first project in my portfolio. Meta!</p>
+                </figcaption>
+              </figure>
+              <!-- Item 2 -->
+              <figure class="figure featured-item col-xs-12 col-sm-6 col-md-4">
+                <picture>
+                  <source media="(max-width: 575px)" srcset="images/resume-project-sm2x.png 2x, images/resume-project-sm.png" />
+                  <source media="(min-width: 576px)" srcset="images/resume-project-med-lg.png" />
+                  <img class="featured-img img-thumbnail" src="images/resume-project.png" alt="placeholder">
+                </picture>
+                <figcaption class="figure-caption featured-caption">
+                  <h3 class="featured-item-heading text-center">Web Resume</h3>
+                  <p>A web-resume using CSS, HTML, Javascript, and a horrible color scheme that I need to update.</p>
+                </figcaption>
+              </figure>
+              <!-- Item 3 -->
+              <figure class="figure featured-item col-xs-12 col-sm-6 col-md-4">
+                <picture>
+                  <source media="(max-width: 575px)" srcset="images/placeholder-sm.jpeg" />
+                  <source media="(min-width: 576px)" srcset="images/placeholder-med-lg.jpeg" />
+                  <img class="featured-img img-thumbnail" src="http://placekitten.com/200/300" alt="placeholder">
+                </picture>
+                <figcaption class="figure-caption featured-caption">
+                  <h3 class="featured-item-heading text-center">Placeholder</h3>
+                  <p>I didn't actually make these, though I wish I had a puppy that could skateboard. Future projects will go here!</p>
+                </figcaption>
+              </figure>
             </section>
+          <!-- close sections Featured and Content -->
+          </section>
         </section>
-
       </main>
     </div>
-
+    <!-- Grunt livereload -->
     <script src="http://localhost:35729/livereload.js"></script>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
