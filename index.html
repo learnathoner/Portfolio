@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio Page</title>
+    <title>Mike's Project Portfolio</title>
+    <link rel="icon" href="images/logo.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -17,7 +18,7 @@
       <!-- Header -->
       <header class="header">
         <!-- Logo image -->
-          <img class="logo" src="images/logo.svg" alt="placeholder">
+          <img class="logo" src="images/logo.svg" alt="portfolio logo">
         <!-- Large Name/Caption for < 576px -->
         <div class="header-text-large hidden-xs-down header-text">
           <h1 class="display-4">Michael Tikh<br>
@@ -33,73 +34,68 @@
       <hr class="line" id="header-divider">
 
       <!-- TODO: Ask when to use HTML5 tags and comments? -->
-
       <!-- Main section -->
       <main>
-        <section class="content">
 
+        <!-- Main Portfolio Image -->
+        <section class="main-image-container row">
           <!-- TODO: Ask about imageMagick/grunt for multiple aspect ratios -->
-          <!-- Main Portfolio Image -->
-          <section class="main-image-container row">
-            <picture>
-              <source media="(min-width: 700px)" srcset="images/sql-project.png" />
-              <img class="main-image" src="images/sql-project-sm-med.png" alt="">
-            </picture>
+          <picture>
+            <source media="(min-width: 700px)" srcset="images/sql-project.png" />
+            <img class="main-image" src="images/sql-project-sm-med.png" alt="">
+          </picture>
+        </section>
+
+        <!-- Featured Work -->
+        <section class="featured">
+          <!-- Featured Work Header -->
+          <section class="featured-header-container row rounded">
+            <div class="col-12 text-center">
+              <h3 class="featured-section-header">
+                Featured Work
+              </h3>
+            </div>
           </section>
-
-          <!-- Featured Work -->
-          <section class="featured">
-
-            <!-- Featured Work Header -->
-            <section class="featured-header-container row rounded">
-              <div class="col-12 text-center">
-                <h3 class="featured-header">
-                  Featured Work
-                </h3>
-              </div>
-            </section>
-
-            <!-- Featured Work Items -->
-            <section class="featured-items row">
-              <!-- Item 1 -->
-              <figure class="figure featured-item col-xs-12 col-sm-6 col-md-4">
-                <picture>
-                  <source media="(max-width: 575px)" srcset="images/website-project-sm.png" />
-                  <source media="(min-width: 576px)" srcset="images/website-project-med-lg.png" />
-                  <img class="featured-image img-thumbnail" src="images/website-project.png" alt="placeholder">
-                </picture>
-                <figcaption class="figure-caption featured-caption">
-                  <h3 class="featured-item-heading text-center">Project Portfolio</h3>
-                  <p>That thing you're looking at right now. My Project Portfolio is the first project in my portfolio. Meta!</p>
-                </figcaption>
-              </figure>
-              <!-- Item 2 -->
-              <figure class="figure featured-item col-xs-12 col-sm-6 col-md-4">
-                <picture>
-                  <source media="(max-width: 575px)" srcset="images/resume-project-sm2x.png 2x, images/resume-project-sm.png" />
-                  <source media="(min-width: 576px)" srcset="images/resume-project-med-lg.png" />
-                  <img class="featured-img img-thumbnail" src="images/resume-project.png" alt="placeholder">
-                </picture>
-                <figcaption class="figure-caption featured-caption">
-                  <h3 class="featured-item-heading text-center">Web Resume</h3>
-                  <p>A web-resume using CSS, HTML, Javascript, and a horrible color scheme that I need to update.</p>
-                </figcaption>
-              </figure>
-              <!-- Item 3 -->
-              <figure class="figure featured-item col-xs-12 col-sm-6 col-md-4">
-                <picture>
-                  <source media="(max-width: 575px)" srcset="images/placeholder-sm.jpeg" />
-                  <source media="(min-width: 576px)" srcset="images/placeholder-med-lg.jpeg" />
-                  <img class="featured-img img-thumbnail" src="http://placekitten.com/200/300" alt="placeholder">
-                </picture>
-                <figcaption class="figure-caption featured-caption">
-                  <h3 class="featured-item-heading text-center">Placeholder</h3>
-                  <p>I didn't actually make these, though I wish I had a puppy that could skateboard. Future projects will go here!</p>
-                </figcaption>
-              </figure>
-            </section>
-          <!-- close sections Featured and Content -->
+          <!-- Featured Work Items -->
+          <section class="featured-items row">
+            <!-- Item 1 -->
+            <figure class="figure featured-item col-sm-12 col-md-6 col-lg-4">
+              <picture>
+                <source media="(max-width: 767px)" srcset="images/website-project-sm.png" />
+                <source media="(min-width: 768px)" srcset="images/website-project-med-lg.png" />
+                <img class="featured-image img-thumbnail" src="images/website-project.png" alt="Portfolio Project">
+              </picture>
+              <figcaption class="figure-caption featured-caption">
+                <h3 class="featured-item-heading text-center">Project Portfolio</h3>
+                <p>That thing you're looking at right now. My Project Portfolio is the first project in my portfolio. Meta!</p>
+              </figcaption>
+            </figure>
+            <!-- Item 2 -->
+            <figure class="figure featured-item col-sm-12 col-md-6 col-lg-4">
+              <picture>
+                <source media="(max-width: 767px)" srcset="images/resume-project-sm2x.png 2x, images/resume-project-sm.png" />
+                <source media="(min-width: 768px)" srcset="images/resume-project-med-lg.png" />
+                <img class="featured-img img-thumbnail" src="images/resume-project.png" alt="Resume Project">
+              </picture>
+              <figcaption class="figure-caption featured-caption">
+                <h3 class="featured-item-heading text-center">Web Resume</h3>
+                <p>A web-resume using CSS, HTML, Javascript, and a horrible color scheme that I need to update.</p>
+              </figcaption>
+            </figure>
+            <!-- Item 3 -->
+            <figure class="figure featured-item col-sm-12 col-md-6 col-lg-4">
+              <picture>
+                <source media="(max-width: 767px)" srcset="images/placeholder-sm.jpeg" />
+                <source media="(min-width: 768px)" srcset="images/placeholder-med-lg.jpeg" />
+                <img class="featured-img img-thumbnail" src="http://placekitten.com/200/300" alt="Future Projects here">
+              </picture>
+              <figcaption class="figure-caption featured-caption">
+                <h3 class="featured-item-heading text-center">Placeholder</h3>
+                <p>I didn't actually make these, though I wish I had a puppy that could skateboard. Future projects will go here!</p>
+              </figcaption>
+            </figure>
           </section>
+        <!-- close sections Featured and Content -->
         </section>
       </main>
     </div>

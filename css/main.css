@@ -9,11 +9,14 @@ body, html {
   height: 100%;
 }
 
+/*
+I decided to use 850px as my container width, so several media requests
+happen there - aligning header and featured-items with the container edge
+*/
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   list-style: 1.2em;
-  color: #424242;
   max-width: 850px;
   margin-left: auto;
   margin-right: auto;
@@ -23,16 +26,11 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 p {
   padding: 10px;
 }
 
+/* Remove container padding from HRs */
 .line {
   margin-left: -15px;
   margin-right: -15px;
@@ -58,14 +56,22 @@ p {
   text-align: right;
 }
 
+/* Extend header to edge of container once window > 850px */
+@media (min-width: 850px) {
+  .header {
+    margin: 0 -15px 0 -15px;
+  }
+  .header-text {
+    margin-right: 0;
+  }
+}
+
 .header > .logo {
   max-height: 100px;
 }
 
 #header-divider {
   margin-top: 0;
-  margin-left: -15px;
-  margin-right: -15px;
 }
 
 /*
@@ -73,9 +79,6 @@ p {
 * Main
 *
 */
-
-.content {
-}
 
 /*
 *
@@ -103,8 +106,14 @@ p {
 }
 
 @media (min-width: 576px) {
-  .featured-header {
+  .featured-section-header {
     font-size: 2.0rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .featured-items {
+    margin: 0 -30px 0 -30px;
   }
 }
 
@@ -118,13 +127,12 @@ p {
 
 /*
 *
-* Bootstrap breakpoints
+* Bootstrap breakpoints for reference:
 *
 */
 
-/*TODO: Why is medium breakpoint not activated using "dev tools" iPad?*/
 
-// Small devices (landscape phones, 576px and up)
+/*// Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   }
 }
@@ -136,4 +144,4 @@ p {
 @media (min-width: 992px) { ... }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) { ... }*/
