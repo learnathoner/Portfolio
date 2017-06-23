@@ -8,7 +8,7 @@ Steps:
 Watch Page: Website script: <script src="http://localhost:35729/livereload.js"></script>
 */
 
-// CHECK ON LINT AND AUTO HTML CHECKER
+// TODO: Check on CSS lint
 
 module.exports = function(grunt) {
 
@@ -19,8 +19,16 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['css/*.css', '*.html'],
-        tasks: []
+        tasks: [] //options: htmllint
       },
+    },
+    htmllint: {
+      all: {
+        options: {
+          ignore: /Section lacks heading(.*)/
+        },
+        src: "*.html"
+      }
     },
     // responsive_images: {
     //   dev: {
@@ -58,6 +66,7 @@ module.exports = function(grunt) {
 
   // grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['watch']);
+  grunt.loadNpmTasks('grunt-html');
+  grunt.registerTask('default', ['watch', 'html']);
 
 };

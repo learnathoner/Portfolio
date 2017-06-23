@@ -2,7 +2,16 @@
   border: 1px solid black;
 }*/
 
-body, html {
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: "zocial", sans-serif;
+  font-size: 1.5rem;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -14,7 +23,7 @@ I decided to use 850px as my container width, so several media requests
 happen there - aligning header and featured-items with the container edge
 */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   list-style: 1.2em;
   max-width: 850px;
@@ -28,6 +37,12 @@ h1, h2, h3, h4, h5 {
 
 p {
   padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Remove container padding from HRs */
@@ -44,30 +59,23 @@ p {
 
 .header {
   padding: 10px;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-text {
-  margin-right: 5px;
-  text-align: right;
 }
 
 /* Extend header to edge of container once window > 850px */
 @media (min-width: 850px) {
   .header {
-    margin: 0 -15px 0 -15px;
-  }
-  .header-text {
-    margin-right: 0;
+    margin: 0 -30px 0 -30px;
   }
 }
 
-.header > .logo {
+.logo {
   max-height: 100px;
+}
+
+@media (min-width: 576px) {
+  .logo {
+    max-height: 115px;
+  }
 }
 
 #header-divider {
@@ -86,10 +94,14 @@ p {
 *
 */
 
+/* Compensate for the 15px padding on columns so main image extends to sides */
+#main-image-row {
+  margin: 0 -30px 0 -30px;
+}
+
 .main-image {
   max-height: 400px;
   width: 100%;
-
 }
 
 /*
@@ -98,7 +110,7 @@ p {
 *
 */
 
-.featured-header-container {
+#featured-header-row {
   margin: 10px -15px 10px -15px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -106,23 +118,72 @@ p {
 }
 
 @media (min-width: 576px) {
-  .featured-section-header {
+  .featured-header {
     font-size: 2.0rem;
   }
 }
 
 @media (min-width: 850px) {
-  .featured-items {
+  #featured-items-row {
     margin: 0 -30px 0 -30px;
   }
 }
 
+.featured-item {
+  margin-bottom: 0;
+}
+
 .featured-image {
-  max-width: 100%;
+  width: 100%;
 }
 
 .featured-item-heading {
   padding-top: 10px;
+}
+
+/*
+*
+* Footer
+*
+*/
+
+.footer {
+  background: #abb2bc;
+  padding: 10px 0;
+}
+
+#footer-heading-col {
+  padding-bottom: 5px;
+}
+
+#footer-heading {
+  font-size: 1.25rem;
+}
+
+.footer a {
+  color: #464eba;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+@media(max-width: 575px) {
+  .footer a {
+    font-size: 16px;
+    padding: 5px;
+  }
+  .footer-icon-label {
+    font-size: 14px;
+  }
 }
 
 /*

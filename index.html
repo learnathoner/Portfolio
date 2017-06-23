@@ -8,7 +8,7 @@
     <link rel="icon" href="images/logo.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
@@ -16,54 +16,57 @@
     <div class="container-fluid">
 
       <!-- Header -->
-      <header class="header">
+      <header class="header row d-flex justify-content-between align-items-center">
         <!-- Logo image -->
-          <img class="logo" src="images/logo.png" alt="portfolio logo">
-        <!-- Large Name/Caption for < 576px -->
-        <div class="header-text-large hidden-xs-down header-text">
-          <h1 class="display-4">Michael Tikh<br>
-          <small class="text-muted">Web Developer</small></h1>
+        <div id="logo-image-container" class="col-3">
+          <img class="logo" src="images/logo.png" alt="Mike's portfolio logo">
         </div>
-        <!-- Small Name/Caption for > 576px -->
-        <div class="header-text-small hidden-sm-up header-text">
-          <h1>Michael Tikh<br>
-          <small class="text-muted">Web Developer</small></h1>
+        <div id="header-text-container" class="col-9 text-right">
+          <!-- Large Name/Caption for < 576px -->
+          <div id="header-text-large" class="hidden-xs-down header-text">
+            <h1 class="display-4">Michael Tikh<br>
+            <small class="text-muted">Web Developer</small></h1>
+          </div>
+          <!-- Small Name/Caption for > 576px -->
+          <div id="header-text-small" class="hidden-sm-up header-text">
+            <h1>Michael Tikh<br>
+            <small class="text-muted">Web Developer</small></h1>
+          </div>
         </div>
       </header>
 
-      <hr class="line" id="header-divider">
+      <hr id="header-divider" class="line">
 
-      <!-- TODO: Ask when to use HTML5 tags and comments? -->
       <!-- Main section -->
       <main>
 
         <!-- Main Portfolio Image -->
-        <section class="main-image-container row">
-          <!-- TODO: Ask about imageMagick/grunt for multiple aspect ratios -->
-          <picture>
+        <section id="main-image-row" class="row">
+          <picture id="main-image-container" class="col">
             <source media="(min-width: 700px)" srcset="images/sql-project.png" />
-            <img class="main-image" src="images/sql-project-sm-med.png" alt="">
+            <img class="main-image" src="images/sql-project-sm-med.png" alt="Mike's SQL Tournament Database Project">
           </picture>
         </section>
 
         <!-- Featured Work -->
         <section class="featured">
           <!-- Featured Work Header -->
-          <section class="featured-header-container row rounded">
-            <div class="col-12 text-center">
-              <h3 class="featured-section-header">
+          <section id="featured-header-row" class="row rounded">
+            <div id="featured-header-col" class="col-12 text-center">
+              <h3 class="featured-header">
                 Featured Work
               </h3>
             </div>
           </section>
           <!-- Featured Work Items -->
-          <section class="featured-items row">
+          <!-- TODO: Ask about bootstrap CSS "justify-content" vs using in CSS -->
+          <section id="featured-items-row" class="row justify-content-center">
             <!-- Item 1 -->
-            <figure class="figure featured-item col-sm-12 col-md-6 col-lg-4">
+            <figure id="item-1" class="figure featured-item col-sm-12 col-md-6 col-lg-4">
               <picture>
                 <source media="(max-width: 767px)" srcset="images/website-project-sm.png" />
                 <source media="(min-width: 768px)" srcset="images/website-project-med-lg.png" />
-                <img class="featured-image img-thumbnail" src="images/website-project.png" alt="Portfolio Project">
+                <img class="featured-image img-thumbnail" src="images/website-project.png" alt="The current Portfolio Project">
               </picture>
               <figcaption class="figure-caption featured-caption">
                 <h3 class="featured-item-heading text-center">Project Portfolio</h3>
@@ -71,11 +74,11 @@
               </figcaption>
             </figure>
             <!-- Item 2 -->
-            <figure class="figure featured-item col-sm-12 col-md-6 col-lg-4">
+            <figure id="item-2" class="figure featured-item col-sm-12 col-md-6 col-lg-4">
               <picture>
                 <source media="(max-width: 767px)" srcset="images/resume-project-sm2x.png 2x, images/resume-project-sm.png" />
                 <source media="(min-width: 768px)" srcset="images/resume-project-med-lg.png" />
-                <img class="featured-img img-thumbnail" src="images/resume-project.png" alt="Resume Project">
+                <img class="featured-image img-thumbnail" src="images/resume-project.png" alt="A Web Resume Project">
               </picture>
               <figcaption class="figure-caption featured-caption">
                 <h3 class="featured-item-heading text-center">Web Resume</h3>
@@ -83,11 +86,11 @@
               </figcaption>
             </figure>
             <!-- Item 3 -->
-            <figure class="figure featured-item col-sm-12 col-md-6 col-lg-4">
+            <figure id="item-3" class="figure featured-item col-sm-12 col-md-6 col-lg-4">
               <picture>
                 <source media="(max-width: 767px)" srcset="images/placeholder-sm.jpeg" />
                 <source media="(min-width: 768px)" srcset="images/placeholder-med-lg.jpeg" />
-                <img class="featured-img img-thumbnail" src="http://placekitten.com/200/300" alt="Future Projects here">
+                <img class="featured-image img-thumbnail" src="http://placekitten.com/200/300" alt="Future Projects go here">
               </picture>
               <figcaption class="figure-caption featured-caption">
                 <h3 class="featured-item-heading text-center">Placeholder</h3>
@@ -95,10 +98,38 @@
               </figcaption>
             </figure>
           </section>
-        <!-- close sections Featured and Content -->
         </section>
       </main>
     </div>
+    <footer class="footer">
+      <div id="footer-container" class="container">
+        <div id="footer-row" class="row justify-content-center">
+          <div id="footer-heading-col" class="col-12 text-sm-center">
+            <span id="footer-heading">
+              Social Media Contacts
+            </span>
+          </div>
+          <div class="footer-social-icon col-4">
+            <a href="mailto:mike.tikh@gmail.com" class="zocial-gmail"></a>
+            <span class="footer-icon-label">
+              Gmail
+            </span>
+          </div>
+          <div class="footer-social-icon col-4">
+            <a href="https://www.linkedin.com/in/michael-tikh-9b53a08/" class="zocial-linkedin"></a>
+            <span class="footer-icon-label">
+              LinkedIn
+            </span>
+          </div>
+          <div class="footer-social-icon col-4">
+            <a href="https://github.com/learnathoner/" class="zocial-github"></a>
+            <span class="footer-icon-label">
+              GitHub
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Grunt livereload -->
     <script src="http://localhost:35729/livereload.js"></script>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
