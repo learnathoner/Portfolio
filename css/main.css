@@ -94,9 +94,9 @@ ul {
 *
 */
 
-/* Compensate for the 15px padding on columns so main image extends to sides */
-#main-image-row {
-  margin: 0 -30px 0 -30px;
+/* Remove padding from main image col */
+#main-image-container {
+  padding: 0;
 }
 
 .main-image {
